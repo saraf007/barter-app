@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm" autocomplete="on">
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address :</label>
+        <input type="email" class="form-control" id="emailInput" required email
+         name="email" ngModel #emailInput="ngModel">
+      </div>
+      <div class="mb-3">
+        <span *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">Please enter a valid email.</span>
+      </div>
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password :</label>
+        <input type="password" class="form-control" id="passwordInput" required
+        name="password" ngModel #passwordInput="ngModel">
+      </div>
+      <div class="mb-3">
+        <span *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">Please enter a valid password.</span>
+      </div>
+    <!-- Login -->
+    <div class="mb-3">
+      <button type="submit" [disabled]="loginForm.invalid"
+      [ngClass]="(loginForm.invalid && loginForm.touched)?'btn btn-outline-danger':'btn btn-outline-primary'">Login</button>
+    </div>
+    </form>
+  </div>
+</div>

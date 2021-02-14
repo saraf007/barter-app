@@ -1,0 +1,9 @@
+input.ng-touched.ng-invalid{
+  border: 1px red solid;
+}
+
+.card {
+  width: 50%;
+  margin: auto;
+  margin-top: 7rem;
+}

@@ -26,7 +26,14 @@
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Login</button>
+        <!-- Login -->
+        <a routerLink="/login" routerLinkActive="active" class="login">
+          <button class="btn btn-outline-primary" type="button">Login</button>
+        </a>
+        <!-- Signup -->
+        <a routerLink="/signup" routerLinkActive="active" class="signup">
+          <button class="btn btn-outline-primary" type="button">Signup</button>
+        </a>
       </form>
     </div>
   </div>
